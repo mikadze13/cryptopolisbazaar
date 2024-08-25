@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/content/css/console.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loader_main" id="loader">
+        <div class="loader"></div>
+    </div>
+    <div class="side-menu">
+        <div class="side_menu__logo">
+            <h1 style="margin: 0;">LOGO</h1>
+        </div>
+        <div class="side_menu__items">
+            <button class="menu-btn active" data-target="home"><i class="fa-solid fa-house"></i> Home</button>
+            <button class="menu-btn" data-target="market"><i class="fa-solid fa-shop"></i> Market</button>
+            <button class="menu-btn" data-target="wallet"><i class="fa-solid fa-wallet"></i> My Wallet</button>
+            <button class="menu-btn" data-target="orders"><i class="fa-solid fa-book"></i> Orders</button>
+            <button class="menu-btn" data-target="settings"><i class="fa-solid fa-gear"></i> Settings</button>
+        </div>
+
+
+        <div class="log_out"> <a href="/index.html"><i
+                    class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>logout</a></div>
+    </div>
+
+    <div class="console__container active" id="home">
+        <div class="crypto-container" id="btcContainer">
+            <div class="crypto-header">
+                <div class="logo-name">
+                    <i class="fab fa-bitcoin" style="font-size: 44px;  color:#f79621;"></i>
+                    <div style="display: flex; flex-direction: column;">
+                        <span id="btc_name" style="display: block !important; font-size: 25px;"></span>
+                        <span id="btc_symbol">BTC</span>
+                    </div>
+                </div>
+                <div class="last-price">Last Price</div>
+            </div>
+            <div class="crypto-footer " style="display: flex; justify-content: space-between;">
+                <span class="price" id="btc_price"></span>
+                <span class="last__price">$555</span>
+            </div>
+        </div>
+
+        <div class="crypto-container" id="ethContainer">
+            <div class="crypto-header">
+                <div class="logo-name">
+                    <i class="fa-brands fa-ethereum"></i>
+                    <div style="display: flex; flex-direction: column;">
+                        <span id="eth_name" style="display: block !important; font-size: 25px;"></span>
+                        <span id="eth_symbol">ETH</span>
+                    </div>
+                </div>
+                <div class="last-price">Last Price</div>
+            </div>
+            <div class="crypto-footer" style="display: flex; justify-content: space-between;">
+                <span class="price" id="eth_price"></span>
+                <span class="last__price">$555</span>
+            </div>
+        </div>
+
+        <div class="crypto-container" id="ltcContainer">
+            <div class="crypto-header">
+                <div class="logo-name">
+                    <i class="fa-solid fa-litecoin-sign"></i>
+                    <div style="display: flex; flex-direction: column;">
+                        <span id="ltc_name" style="display: block !important; font-size: 25px;"></span>
+                        <span id="ltc_symbol">LTC</span>
+                    </div>
+                </div>
+                <div class="last-price">Last Price</div>
+            </div>
+            <div class="crypto-footer" style="display: flex; justify-content: space-between;">
+                <span class="price" id="ltc_price"></span>
+                <span class="last__price">$555</span>
+            </div>
+        </div>
+
+        <div class="crypto-container crypto_counter">
+            <div class="crypto_counter__inner">
+                <div class="crypto_counter__header">
+                    <h2>Crypto exchange</h2>
+                    <p>You can quickly exchange cryptocurrency from here</p>
+                </div>
+                <div class="converter">
+                    <div class="input-group">
+                        <input type="number" class="converter_input" id="btcAmount" placeholder="0.1" step="0.01"
+                            min="0">
+                        <div class="converter_currency">BTC</div>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="converter_input " id="usdAmount" readonly>
+                        <div class="converter_currency converted_currency">USD</div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="button">Buy BTC with USD</div>
+                        <div class="button">Sell BTC for USD</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="console__container" id="market">
+
+
+        <header class="console_market__header">
+            <div class="market_header_inner">
+                <h2>Today's Markets</h2>
+                <p>Today's top cryptocurrency prices</p>
+            </div>
+            <div class="market_header_inner1">
+                <input type="text" id="searchInput" placeholder="Search for a coin..." />
+            </div>
+
+        </header>
+        <table id="crypto-table" class="highlight centered">
+            <thead>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>Change</th>
+                <th>Market Cap Usd</th>
+                <th>volume 24hr</th>
+            </thead>
+            <tbody id="crypto-table-body">
+
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+    <div class="console__container" id="wallet">
+        <div class="wallet_switcher__main">
+            <h2>Wallets</h2>
+            <div class="switcher">
+                <button id="cryptoBtn" class="active">Crypto</button>
+                <button id="fiatBtn">Fiat</button>
+            </div>
+        </div>
+
+
+        <div class="wallets">
+            <div id="cryptoWallets" class="wallet">
+                <span>Add new crypto wallet</span>
+            </div>
+            <div id="fiatWallets" class="wallet hidden">
+                <span>Add new fiat wallet</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="console__container" id="orders">
+        <h2>Orders</h2>
+        <p>Check your orders.</p>
+    </div>
+
+    <div class="console__container" id="settings">
+        <h2>Settings</h2>
+        <p>Adjust your preferences here.</p>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/content/js/API.js"></script>
+<script src="/content/js/main.js"></script>
+
+</html>

@@ -1,0 +1,461 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    background-color: #1d202b;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.side_menu__logo {
+    width: 100%;
+    height: 60px;
+    background: green;
+    margin-bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b0b3b8;
+}
+
+.log_out {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 42px;
+    color: #b0b3b8;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 19px;
+}
+
+.log_out i {
+    margin-right: 10px;
+}
+
+.log_out a {
+    color: #b0b3b8;
+    text-decoration: none;
+}
+
+.menu-btn {
+    display: block;
+    background-color: transparent;
+    color: #b0b3b8;
+    border: 2px solid transparent;
+    padding: 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 19px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-btn i {
+    margin-right: 10px;
+}
+
+.menu-btn.active {
+    color: #005ffe;
+    background-color: #17141a;
+}
+
+.console__container {
+    margin-left: 260px;
+    padding: 26px 73px;
+    background: #151820;
+    color: #333;
+    min-height: 100vh;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.console__container.active {
+    display: block;
+}
+
+.crypto-container {
+    width: 100%;
+    background-color: #1d202b;
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 15px auto;
+    margin-top: 10px !important;
+}
+
+.crypto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 29px;
+    border-bottom: 2px solid gray;
+    padding-top: 11px;
+}
+
+.crypto-header .logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.crypto-header .logo-name i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.crypto-header .last-price {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: inherit;
+    color: #2267d1;
+    padding: 5px 7px;
+    border: 1px solid;
+    border-radius: 30px;
+    background: #a6eeff;
+}
+
+.crypto-footer {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+
+}
+
+#btc_symbol,
+#eth_symbol,
+#ltc_symbol {
+    color: #b0b3b8;
+}
+
+.logo-name i {
+    font-size: 45px !important;
+}
+
+.last__price {
+    color: green;
+    font-size: 18px;
+}
+
+.crypto-footer .price {
+    color: whitesmoke;
+    font-weight: 400;
+}
+
+/*  CRYPTO COUNTER CALCULATOR BEGIN */
+.crypto_counter__header h2 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.crypto_counter__header p {
+    margin: 10px 0px 0px 0px !important;
+    color: #b0b3b8;
+}
+
+.converter {
+    margin: 21px auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.converter_input {
+    background-color: #2a2d39;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    width: 80%;
+    text-align: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 17px;
+}
+
+.converter_currency {
+    width: 20%;
+    height: 55px;
+    background-color: #2a2d39;
+    margin-left: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.converted_currency {
+    height: 54px !important;
+}
+
+/* .input-group span {
+    font-size: 18px;
+    color: #fff;
+} */
+
+input:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 15px 20px;
+    background-color: #005ffe;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    flex: 1;
+    margin: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+.button:hover {
+    background-color: #004dcc;
+    box-shadow: 0px 14px 28px rgba(0, 95, 254, 0.25), 0px 6px 5px rgba(0, 95, 254, 0.22)
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* market */
+.console_market__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+.market_header_inner{
+    display: flex;
+    flex-direction: column; 
+}
+.market_header_inner h2{
+    margin:0;
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+}
+.market_header_inner p{
+    color: #b0b3b8;
+    margin:15px 0px 15px 0px;
+}
+.market_header_inner1{
+    width: 264px;
+    padding: 23px; 
+    background-color: #1d202b;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.market_header_inner1 input{
+    background: #252938;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    color: white;
+    width: 220px;
+}
+#crypto-table {
+    width: 100%;
+    border-radius: 20px;
+    background: white;
+    padding: 20px !important;
+}
+
+#crypto-table th,
+#crypto-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+#crypto-table-body tr {
+    height: 58px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}
+/* loader */
+.loader_main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(32, 41, 33);
+    z-index: 12000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    background-color: rgb(32, 41, 33);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+/* WALLET BEGIN */
+.wallet_switcher__main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wallet_switcher__main h2{
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+}
+.switcher {
+    display: flex;
+    background-color: #2C2F36;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.switcher button {
+    padding: 16px 45px;
+    border: none;
+    cursor: pointer;
+    background-color: #2C2F36;
+    color: #fff;
+    font-size: 17px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.switcher button.active {
+    background-color: #3A94F0;
+    border-radius: 25px;
+}
+
+.wallets {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wallet {
+    width: 300px;
+    height: 150px;
+    background-color: #2C2F36;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wallet:hover {
+    background-color: #3A94F0;
+}
+
+.wallet span {
+    font-size: 18px;
+    color: #fff;
+}
+
+.wallets .hidden {
+    display: none;
+}
+/* WALLET END */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loader end */
+@media screen and (max-width: 768px) {
+    .side-menu {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu-btn {
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    .console__container {
+        margin-left: 0;
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .side-menu {
+        flex-direction: column;
+    }
+
+    .menu-btn {
+        font-size: 12px;
+        padding: 8px;
+        margin: 5px 0;
+    }
+}

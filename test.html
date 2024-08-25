@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto-Fiat Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #181A20;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .switcher {
+            display: flex;
+            background-color: #2C2F36;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        .switcher button {
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            background-color: #2C2F36;
+            color: #fff;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .switcher button.active {
+            background-color: #3A94F0;
+        }
+
+        .wallets {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .wallet {
+            width: 300px;
+            height: 150px;
+            background-color: #2C2F36;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .wallet:hover {
+            background-color: #3A94F0;
+        }
+
+        .wallet span {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .wallets .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="switcher">
+        <button id="cryptoBtn" class="active">Crypto</button>
+        <button id="fiatBtn">Fiat</button>
+    </div>
+
+    <div class="wallets">
+        <div id="cryptoWallets" class="wallet">
+            <span>Add new crypto wallet</span>
+        </div>
+        <div id="fiatWallets" class="wallet hidden">
+            <span>Add new fiat wallet</span>
+        </div>
+    </div>
+
+    <script>
+        const cryptoBtn = document.getElementById('cryptoBtn');
+        const fiatBtn = document.getElementById('fiatBtn');
+        const cryptoWallets = document.getElementById('cryptoWallets');
+        const fiatWallets = document.getElementById('fiatWallets');
+
+        cryptoBtn.addEventListener('click', () => {
+            cryptoBtn.classList.add('active');
+            fiatBtn.classList.remove('active');
+            cryptoWallets.classList.remove('hidden');
+            fiatWallets.classList.add('hidden');
+        });
+
+        fiatBtn.addEventListener('click', () => {
+            fiatBtn.classList.add('active');
+            cryptoBtn.classList.remove('active');
+            fiatWallets.classList.remove('hidden');
+            cryptoWallets.classList.add('hidden');
+        });
+    </script>
+
+</body>
+</html>
