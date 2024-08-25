@@ -253,36 +253,41 @@ input[type=number] {
 }
 
 /* market */
-.console_market__header{
+.console_market__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 28px;
 }
-.market_header_inner{
+
+.market_header_inner {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
-.market_header_inner h2{
-    margin:0;
+
+.market_header_inner h2 {
+    margin: 0;
     font-size: 30px;
     color: white;
     font-weight: 500;
 }
-.market_header_inner p{
+
+.market_header_inner p {
     color: #b0b3b8;
-    margin:15px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
 }
-.market_header_inner1{
+
+.market_header_inner1 {
     width: 264px;
-    padding: 23px; 
+    padding: 23px;
     background-color: #1d202b;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.market_header_inner1 input{
+
+.market_header_inner1 input {
     background: #252938;
     border: none;
     border-radius: 20px;
@@ -290,6 +295,7 @@ input[type=number] {
     color: white;
     width: 220px;
 }
+
 #crypto-table {
     width: 100%;
     border-radius: 20px;
@@ -316,6 +322,7 @@ input[type=number] {
 .red-text {
     color: red;
 }
+
 /* loader */
 .loader_main {
     width: 100%;
@@ -338,18 +345,21 @@ input[type=number] {
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
+
 /* WALLET BEGIN */
-.wallet_switcher__main{
+.wallet_switcher__main {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.wallet_switcher__main h2{
+
+.wallet_switcher__main h2 {
     color: white;
     font-weight: 500;
     font-size: 30px;
 }
+
 .switcher {
     display: flex;
     background-color: #2C2F36;
@@ -369,30 +379,204 @@ input[type=number] {
 }
 
 .switcher button.active {
-    background-color: #3A94F0;
+    background-color: #005ffe;
     border-radius: 25px;
 }
 
 .wallets {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 20px;
 }
 
 .wallet {
-    width: 300px;
-    height: 150px;
-    background-color: #2C2F36;
+    width: 47%;
+    height: 325px;
+    background-color: #1d202b;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 10px;
+}
+
+.wallet1 {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.crypto_wallet_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crypto_wallet_container i {
+    font-size: 77px;
+    font-weight: 500;
+    color: white;
+}
+
+.crypto_wallet_container p {
+    margin: 0;
+    color: #b0b3b8;
+}
+
+.fiat_wallet_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fiatWallet_container__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.BTC_icon {
+    background-color: #fe8e02;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.BTC_icon::before {
+    content: "₿";
+    transform: rotate(15deg);
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+
+.tether_icon {
+    background-color: #01a180;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.tether_icon::before {
+    content: "₮"; 
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+.ETH_icon{ 
+    background-color: #5080ef;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+.ETH_icon::before {
+    content: "ξ"; 
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+.MATIC_icon{
+    background-color: #006bf7;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+.MATIC_icon::before{
+    content: "m"; 
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+} 
+.DOGE_icon{
+    background-color: #cba532;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+.DOGE_icon::before{
+    content: "Ɖ"; 
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+} 
+.USD_icon{
+    background-color: #0de133;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+.USD_icon::before{
+    content: "$"; 
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+.EUR_icon{
+    background-color: #0092f9;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+.EUR_icon::before{
+    content: "€"; 
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+}
+.crypto_name>p {
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+.crypto_balance {
+    margin: 0;
+    font-size: 16px !important;
+    text-align: center;
+    color: #b0b3b8 !important;
+}
+
+.transaction_cointainer_but {
+    width: 129px;
 }
 
 .wallet:hover {
-    background-color: #3A94F0;
+    background-color: #242733;
 }
 
 .wallet span {
@@ -403,6 +587,7 @@ input[type=number] {
 .wallets .hidden {
     display: none;
 }
+
 /* WALLET END */
 @-webkit-keyframes spin {
     0% {
