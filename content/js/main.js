@@ -39,12 +39,12 @@ document.querySelectorAll('.menu-btn').forEach(button => {
     });
 });
 // loader
-window.addEventListener('load', function(){
-    const loader = document.getElementById('loader')
-    const content = document.getElementById('content') 
-    loader.style.display = 'none'
-    content.style.display = 'block'
-})
+// window.addEventListener('load', function () {
+//     const loader = document.getElementById('loader')
+//     const content = document.getElementById('content')
+//     loader.style.display = 'none'
+//     content.style.display = 'block'
+// })
 
 
 // wallet switcher 
@@ -66,3 +66,6 @@ fiatBtn.addEventListener('click', () => {
     fiatWallets.classList.remove('hidden');
     cryptoWallets.classList.add('hidden');
 }); 
+ 
+
+ 

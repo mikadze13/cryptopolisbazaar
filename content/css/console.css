@@ -19,7 +19,6 @@ body {
 .side_menu__logo {
     width: 100%;
     height: 60px;
-    background: green;
     margin-bottom: -40px;
     display: flex;
     align-items: center;
@@ -473,12 +472,13 @@ input[type=number] {
 }
 
 .tether_icon::before {
-    content: "₮"; 
+    content: "₮";
     font-size: 48px;
     color: white;
     font-weight: bold;
 }
-.ETH_icon{ 
+
+.ETH_icon {
     background-color: #5080ef;
     border-radius: 50%;
     width: 80px;
@@ -488,13 +488,15 @@ input[type=number] {
     align-items: center;
     margin: 0 auto 20px auto;
 }
+
 .ETH_icon::before {
-    content: "ξ"; 
+    content: "ξ";
     font-size: 48px;
     color: white;
     font-weight: bold;
 }
-.MATIC_icon{
+
+.MATIC_icon {
     background-color: #006bf7;
     border-radius: 50%;
     width: 80px;
@@ -504,13 +506,15 @@ input[type=number] {
     align-items: center;
     margin: 0 auto 20px auto;
 }
-.MATIC_icon::before{
-    content: "m"; 
+
+.MATIC_icon::before {
+    content: "m";
     font-size: 48px;
     color: white;
     font-weight: bold;
-} 
-.DOGE_icon{
+}
+
+.DOGE_icon {
     background-color: #cba532;
     border-radius: 50%;
     width: 80px;
@@ -520,13 +524,15 @@ input[type=number] {
     align-items: center;
     margin: 0 auto 20px auto;
 }
-.DOGE_icon::before{
-    content: "Ɖ"; 
+
+.DOGE_icon::before {
+    content: "Ɖ";
     font-size: 48px;
     color: white;
     font-weight: bold;
-} 
-.USD_icon{
+}
+
+.USD_icon {
     background-color: #0de133;
     border-radius: 50%;
     width: 80px;
@@ -536,13 +542,15 @@ input[type=number] {
     align-items: center;
     margin: 0 auto 20px auto;
 }
-.USD_icon::before{
-    content: "$"; 
+
+.USD_icon::before {
+    content: "$";
     font-size: 48px;
     color: white;
     font-weight: bold;
 }
-.EUR_icon{
+
+.EUR_icon {
     background-color: #0092f9;
     border-radius: 50%;
     width: 80px;
@@ -552,18 +560,21 @@ input[type=number] {
     align-items: center;
     margin: 0 auto 20px auto;
 }
-.EUR_icon::before{
-    content: "€"; 
+
+.EUR_icon::before {
+    content: "€";
     font-size: 48px;
     color: white;
     font-weight: bold;
 }
+
 .crypto_name>p {
     color: white;
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 7px;
 }
+
 .crypto_balance {
     margin: 0;
     font-size: 16px !important;
@@ -609,15 +620,44 @@ input[type=number] {
     }
 }
 
+.mobiletest {
+    display: none;
+}
+
+@media screen and (max-width:1324px) {
+    .table_container {
+        overflow-x: scroll;
+    }
+
+    .wallet {
+        width: 100%;
+    }
+}
+
 /* loader end */
 @media screen and (max-width: 768px) {
     .side-menu {
         width: 100%;
         height: auto;
-        padding: 10px;
         position: relative;
         display: flex;
         justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+
+    .crypto-container {
+        width: auto;
+        margin: 0px 10px;
+    }
+
+    .log_out {
+        width: auto;
+    }
+
+    .side_menu__items {
+        margin-top: 20px;
+        padding: 0px 10px;
     }
 
     .menu-btn {
@@ -628,8 +668,123 @@ input[type=number] {
 
     .console__container {
         margin-left: 0;
-        padding: 20px;
-        margin-top: 20px;
+        padding: 26px 0px;
+        /* margin-top: 20px; */
+    }
+
+    #home {
+        width: 100%;
+    }
+
+    .side-menu {
+        display: none !important;
+    }
+
+    .mobiletest {
+        display: block !important;
+        background: #1d202b;
+    }
+
+    .side_menu__logo {
+        margin-bottom: 0;
+    }
+
+    .mobile-test {
+        display: none;
+    }
+
+    .log_out {
+        margin-bottom: 0;
+        padding: 15px 18px;
+    }
+
+    #crypto-table-body tr {
+        font-size: 15px;
+    }
+
+    #crypto-table {
+        padding: 0px !important;
+    }
+
+    .wallet {
+        width: 100%;
+    }
+
+    .switcher button {
+        padding: 11px 29px;
+    }
+
+    .mobile_menu__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile_menu__logo img {
+        margin-right: 10px;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    .mobile_menu__logo h1 {
+        margin-left: 10px !important;
+    }
+}
+
+@media screen and (max-width:549px) {
+    .console_market__header {
+        flex-direction: column;
+    }
+
+    .market_header_inner1 {
+        padding: 0px;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .market_header_inner1 input {
+        width: 90%;
+    }
+
+    .crypto-header .logo-name i {
+        font-size: 30px !important;
+    }
+
+    .logo-name div>span {
+        font-size: 22px;
+    }
+
+    .console__crypto_name {
+        font-size: 21px !important;
+    }
+
+    .console__crypto_abr {
+        font-size: 16px !important;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .crypto_counter__header h2 {
+        font-size: 23px;
+    }
+
+    .crypto_counter__header p {
+        font-size: 14px;
+    }
+
+    .converter_input {
+        padding: 10px;
+    }
+
+    .converter_currency {
+        height: 41px !important;
+    }
+
+    .button {
+        padding: 11px 16px;
+        font-size: 14px;
     }
 }
 
@@ -642,5 +797,15 @@ input[type=number] {
         font-size: 12px;
         padding: 8px;
         margin: 5px 0;
+    }
+    .buttons{
+        flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width:378px) {
+    .button {
+        padding: 8px 9px;
+        font-size: 13px;
     }
 }

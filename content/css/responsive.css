@@ -1,12 +1,11 @@
   /* Responsive Styles */
   @media (max-width: 768px) {
-      .header-container {
+      /* .header-container {
           flex-direction: column;
           align-items: flex-start;
-      }
+      } */
 
-      .nav-links ul {
-          flex-direction: column;
+      .nav-links ul { 
           gap: 10px;
           margin-left: 0;
       }
@@ -14,7 +13,7 @@
       .header-buttons {
           flex-direction: column;
           gap: 10px;
-          margin-top: 15px; 
+          margin-top: 15px;
       }
 
       .footer-col {
@@ -48,4 +47,194 @@
           width: 40px;
           height: 40px;
       }
+  }
+
+  @media only screen and (max-width: 992px) {
+      .nav-links ul { 
+          gap: 10px;
+          text-align: center;
+      }
+
+      .header-buttons {
+          margin-top: 10px;
+      }
+  }
+
+  @media only screen and (max-width: 768px) {
+      .main-title {
+          font-size: 2.5rem;
+      }
+
+      .sub-title {
+          font-size: 2rem;
+      }
+
+      .main-text {
+          font-size: 1rem;
+          max-width: 90%;
+      }
+
+      /* .header-container {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px;
+      } */
+
+      .logo-section {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+      }
+
+      .nav-links ul { 
+          gap: 10px;
+          margin-left: 0;
+          width: 100%;
+      }
+
+      .nav-links ul li {
+          width: 100%;
+          text-align: left;
+      }
+
+      .header-buttons {
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          margin-top: 10px;
+      }
+
+      .language-switcher {
+          align-self: flex-start;
+      }
+    .image-section{
+        display: none;
+    }
+    .login_heading{
+        font-size: 40px;
+    }
+    .main-container h1{
+        font-size: 50px;
+    }
+    .main-container h2{
+        font-size: 40px;
+    }
+
+    /*  */
+    .navbar .desktop_items {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+    }
+    .header-buttons{
+        display: none;
+    }
+    .mobile_login__items{
+        display: block;
+        margin-right: 10px;
+    }
+    header{
+        padding: 15px 7px;
+    }
+    .mobile_navbar nav{
+        padding: 0px 7px;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+    .main-of_lagswitch{
+        display: block !important;
+    }
+    .header-container{
+        display: flex;
+    }
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        background-color: #575757;
+        border: none;
+        padding: 10px 20px;
+    }
+    .navbar .menu-toggle {
+        display: none;
+        /* Hide menu toggle */
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+      /* .header-container {
+          flex-direction: column;
+      } */
+
+      .footer-col {
+          width: 100%;
+      }
+
+      .footer {
+          text-align: center;
+      }
+
+      .header-container {
+          padding: 5px;
+      }
+
+      .nav-links ul li a {
+          font-size: 16px;
+      }
+
+      .header-buttons {
+          gap: 8px;
+      }
+
+      .login-btn,
+      .get-started-btn {
+          font-size: 14px;
+          padding: 8px 12px;
+      }
+  }
+  @media screen and (max-width:425px){
+    .login_heading{
+        font-size: 28px;
+        margin-bottom: 6px !important;
+    }
+    .form-container p{
+        font-size: 14px;
+    }
+    .form-group input{
+        height: 51px;
+    }
+    .form-group button{
+        padding: 11px;
+    }
+    .main-container h1{
+        font-size: 40px;
+    }
+    .main-container h2{
+        font-size: 31px;
+    }
+    .main_description{
+        font-size: 13px;
+    }
+    .why_US{
+        font-size: 21px;
+    }
+    .button-cont{
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+    .logo-section h1{
+        font-size: 28px;
+        margin: 0;
+    }
   }

@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <div class="loader_main" id="loader">
+    <!-- <div class="loader_main" id="loader">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <div class="side-menu">
         <div class="side_menu__logo">
             <h1 style="margin: 0;">LOGO</h1>
@@ -30,6 +30,27 @@
         <div class="log_out"> <a href="/index.html"><i
                     class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>logout</a></div>
     </div>
+    <!--  -->
+    <div class="mobiletest">
+        <div class="side_menu__logo mobile_menu__logo">
+            <h1 style="margin: 0;">LOGO</h1>
+            <img src="/content/img/burger-bar.svg" alt="" class="testt">
+        </div>
+        <div class="mobile-test">
+            <div class="side_menu__items">
+                <button class="menu-btn active" data-target="home"><i class="fa-solid fa-house"></i> Home</button>
+                <button class="menu-btn" data-target="market"><i class="fa-solid fa-shop"></i> Market</button>
+                <button class="menu-btn" data-target="wallet"><i class="fa-solid fa-wallet"></i> My Wallet</button>
+                <button class="menu-btn" data-target="orders"><i class="fa-solid fa-book"></i> Orders</button>
+                <button class="menu-btn" data-target="settings"><i class="fa-solid fa-gear"></i> Settings</button>
+            </div>
+
+
+            <div class="log_out"> <a href="/index.html"><i
+                        class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>logout</a>
+            </div>
+        </div>
+    </div>
 
     <div class="console__container active" id="home">
         <div class="crypto-container" id="btcContainer">
@@ -37,8 +58,9 @@
                 <div class="logo-name">
                     <i class="fab fa-bitcoin" style="font-size: 44px;  color:#f79621;"></i>
                     <div style="display: flex; flex-direction: column;">
-                        <span id="btc_name" style="display: block !important; font-size: 25px;"></span>
-                        <span id="btc_symbol">BTC</span>
+                        <span id="btc_name" class="console__crypto_name"
+                            style="display: block !important; font-size: 25px;"></span>
+                        <span id="btc_symbol" class="console__crypto_abr">BTC</span>
                     </div>
                 </div>
                 <div class="last-price">Last Price</div>
@@ -54,8 +76,9 @@
                 <div class="logo-name">
                     <i class="fa-brands fa-ethereum"></i>
                     <div style="display: flex; flex-direction: column;">
-                        <span id="eth_name" style="display: block !important; font-size: 25px;"></span>
-                        <span id="eth_symbol">ETH</span>
+                        <span id="eth_name" class="console__crypto_name"
+                            style="display: block !important; font-size: 25px;"></span>
+                        <span id="eth_symbol" class="console__crypto_abr">ETH</span>
                     </div>
                 </div>
                 <div class="last-price">Last Price</div>
@@ -71,8 +94,9 @@
                 <div class="logo-name">
                     <i class="fa-solid fa-litecoin-sign"></i>
                     <div style="display: flex; flex-direction: column;">
-                        <span id="ltc_name" style="display: block !important; font-size: 25px;"></span>
-                        <span id="ltc_symbol">LTC</span>
+                        <span id="ltc_name" class="console__crypto_name"
+                            style="display: block !important; font-size: 25px;"></span>
+                        <span id="ltc_symbol" class="console__crypto_abr">LTC</span>
                     </div>
                 </div>
                 <div class="last-price">Last Price</div>
@@ -122,20 +146,21 @@
             </div>
 
         </header>
-        <table id="crypto-table" class="highlight centered">
-            <thead>
-                <th>#</th>
-                <th>Coin</th>
-                <th>Price</th>
-                <th>Change</th>
-                <th>Market Cap Usd</th>
-                <th>volume 24hr</th>
-            </thead>
-            <tbody id="crypto-table-body">
+        <div class="table_container">
+            <table id="crypto-table" class="highlight centered" style="overflow-x:auto;">
+                <thead>
+                    <th>#</th>
+                    <th>Coin</th>
+                    <th>Price</th>
+                    <th>Change</th>
+                    <th>Market Cap Usd</th>
+                    <th>volume 24hr</th>
+                </thead>
+                <tbody id="crypto-table-body">
 
-            </tbody>
-        </table>
-
+                </tbody>
+            </table>
+        </div>
 
 
     </div>
@@ -299,5 +324,19 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="/content/js/API.js"></script>
 <script src="/content/js/main.js"></script>
+<script>
+    let count = 0;
+    let consoleShow = document.querySelector('.testt');
+    let mobileC = document.querySelector('.mobile-test')
+    consoleShow.addEventListener('click', function () {
+        count++
+        if (count % 2 != 0) {
+            mobileC.style.display = 'block'
+        }else{
+            mobileC.style.display = 'none'
+        } 
+
+    })
+</script>
 
 </html>

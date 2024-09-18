@@ -16,9 +16,12 @@
   <header>
     <div class="header-container">
       <div class="logo-section">
-        <!-- <img src="/content/img/logo.png" alt="Logo" class="logo"> -->
         <h1 style="color: darkblue;">LOGO</h1>
         <i class="fas fa-bell bell-icon"></i>
+        <div class="mobile_login__items">
+          <a href="./view/auth/login.html" class="login-btn">Login</a>
+          <a href="#get-started" class="get-started-btn">Get Started</a>
+        </div>
         <nav class="nav-links">
           <ul>
             <li><a href="#main">Main</a></li>
@@ -36,14 +39,41 @@
             <option value="EN" selected>EN</option>
           </select>
         </div>
+
+      </div>
+      <div class="main-of_lagswitch">
+        <ul class="burgerMenu">
+          <li>
+            <img src="/content/img/burgerMenu.svg" alt="burgerMenu">
+          </li>
+        </ul>
       </div>
     </div>
   </header>
+  <div class="mobile_navbar">
+    <nav>
+      <div class="mobile__nav_inner">
+        <h1 style="color: darkblue;">LOGO</h1>
+        <img src="/content/img/close.svg" class="close" alt="close">
+      </div>
+      <div class="navbar_content">
+        <ul class="mobile_navbar_item__container">
+          <li><a href="" class="page">Main</a></li>
+          <li><a href="" class="mobile_service" id="mobile_Home">About</a></li>
+          <li><a href="">Privacy</a></li>
+          <li><a href="">Call</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+  </div>
   <div class="main-container">
     <div class="main-container-fluid">
       <h1 class="test12">Crypto Polis Bazaar</h1>
       <h2>Is the best</h2>
-      <p style="max-width: 600px; color: gray; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed
+      <p style="max-width: 600px; color: gray; " class="main_description">Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Assumenda sed
         soluta repudiandae dicta illo quaerat
         nisi
         maxime reiciendis eum odit quasi dolore aut maiores debitis, dolor vitae necessitatibus sint? Beatae. Lorem,
@@ -105,6 +135,20 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body> 
+  <script src="/content/js/main.js"></script>
+  <script>
+    const navbarBut = document.querySelector('.burgerMenu');
+    const mobilenav = document.querySelector('.mobile_navbar')
+    const close = document.querySelector('.close')
+    navbarBut.addEventListener('click', function () {
+      mobilenav.style.display = 'block'
+
+    })
+    close.addEventListener('click', function () {
+      mobilenav.style.display = 'none';
+    })
+
+  </script>
+</body>
 
 </html>
